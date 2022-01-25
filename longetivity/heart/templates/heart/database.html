@@ -1,0 +1,28 @@
+{%extends 'main.html'%}
+
+{%block content%}
+<table>
+    {%for i in a%}
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>username</th>
+        <th>Age</th>
+        <th>Date</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>{{i.f_name}}</td>
+        <td>{{i.l_name}}</td>
+        <td>{{i.username}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.stamp}}</td>
+        <td><a href="/multi/{{i.id}}"> View</a></td>
+        <td><a href="/editbase/{{i.id}}"> Edit</a></td>
+        <td><a href="/deletebase/{{i.id}}"> Delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}
